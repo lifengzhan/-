@@ -1,4 +1,8 @@
+
+
+
 $('.head_top p').click(function(){
+
     $('.head_content').css({
         'opacity' : 1
  
@@ -29,15 +33,26 @@ $('.login_none').mouseleave(function(){
     $('.login_none').stop().fadeOut(500)
 })
 
+$('.video_box_text a').mouseenter(function(){
+
+    $(this).css({
+        'transition':'0.4s',
+        'background':'#f9f9f9',
+        'color':'black'
+    })
+})
+
+$('.video_box_text a').mouseleave(function(){
+
+    $(this).css({
+        'transition':'0.4s',
+        'background':'transparent',
+        'color':'#f9f9f9'
+    })
 
 
 
-
-
-
-
-
-
+})
 
 
 
