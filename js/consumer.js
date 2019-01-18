@@ -1,17 +1,31 @@
 
 
+var cishu = 0;
 
 $('.head_top p').click(function(){
-
-    $('.head_content').css({
-        'opacity' : 1
- 
-    })
+cishu++;
+// console.log(cishu)
+  
     $('.head_content').stop().slideToggle(500);
+      
+    if(cishu%2 != 0){
+
+        $(this).children('i').css({
+            'transform':'rotate(180deg)',
+            'transition':'1s'
+        })
+      }else if(cishu%2 == 0){
+        $(this).children('i').css({
+            'transform':'rotate(0deg)',
+            'transition':'1s'
+        })
+      }
     
   })
 //   顶部区域
+
 $('.nav_li').click(function(){
+   
     var num = $(this).index();
     $('.none_box').eq(num).css({
         
@@ -19,12 +33,24 @@ $('.nav_li').click(function(){
     })
     $('.none_box').eq(num).stop().fadeToggle(200).siblings('.none_box').stop().fadeOut(200)  
    
+    $(this).find('i').addClass('icon-iconfontup').removeClass('icon-iconfontdown').end().siblings().find('i').removeClass('icon-iconfontup').addClass('icon-iconfontdown')
+
     
 
+})
+$('.top_nav').mouseleave(function(){
+    $(this).children('.none_box').stop().slideUp(200)
+    $(this).children('.nav_ul').find('i').addClass('icon-iconfontdown').removeClass('icon-iconfontup')
 })
 $('.none_box .X').click(function(){
 
     $('.none_box').stop().slideUp()
+ var index = $(this).attr('new');
+//  console.log(index)
+
+$(this)
+.parent().siblings('.nav_ul').children('.nav_li').eq(index).find('i').addClass('icon-iconfontdown').removeClass('icon-iconfontup')
+
 })
 $('.denglu a').mouseenter(function(){
     $('.login_none').stop().fadeIn(500)
