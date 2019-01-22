@@ -1,7 +1,7 @@
 
 
 var cishu = 0;
-
+//   设置顶部p标签点击事件显示下面隐藏盒子以及箭头向上或向下
 $('.head_top p').click(function(){
 cishu++;
 // console.log(cishu)
@@ -23,7 +23,7 @@ cishu++;
     
   })
 //   顶部区域
-
+//   设置导航栏里面li的点击事件使对应的隐藏盒子显示  
 $('.nav_li').click(function(){
    
     var num = $(this).index();
@@ -58,7 +58,7 @@ $('.denglu a').mouseenter(function(){
 $('.login_none').mouseleave(function(){
     $('.login_none').stop().fadeOut(500)
 })
-
+//    video里面的a标签设置鼠标进入事件  改变其css样式
 $('.video_box_text a').mouseenter(function(){
 
     $(this).css({
@@ -67,7 +67,7 @@ $('.video_box_text a').mouseenter(function(){
         'color':'black'
     })
 })
-
+// 设置video里面a标签鼠标离开样式  改变其css样式
 $('.video_box_text a').mouseleave(function(){
 
     $(this).css({
@@ -82,7 +82,7 @@ $('.video_box_text a').mouseleave(function(){
 
 
 
-
+//   以下为底部二维码显示隐藏
 $('.top_right').children('a').eq(0).mouseenter(function(){
     // $('.erweima').css('display','block')
     $('.erweima').stop().fadeIn(500)

@@ -1,5 +1,6 @@
 body {
   min-width: 1300px;
+  position: relative;
 }
 .banear {
   margin-top: 93px;
@@ -25,11 +26,14 @@ body {
   height: 773px;
   background: url(../new_year_img/itembg.png) no-repeat;
   position: relative;
+  z-index: 1;
 }
 .banear .banera_content .ul_box1 li .li_content {
   width: 100%;
   overflow: hidden;
   text-align: center;
+  position: relative;
+  z-index: 1;
 }
 .banear .banera_content .ul_box1 li .li_content img {
   margin-top: 100px;
@@ -58,10 +62,23 @@ body {
   position: absolute;
   top: 5px;
   left: 36px;
+  z-index: 1;
 }
 .banear .banera_content .ul_box1 li .none_pic img {
   width: 233px;
   height: 702px;
+}
+.banear .banera_content .ul_box1 li .li_tag {
+  position: absolute;
+  top: 70px;
+  left: -140px;
+  display: none;
+}
+.banear .banera_content .ul_box1 li .gif_box {
+  position: absolute;
+  top: 100px;
+  left: -125px;
+  z-index: 0;
 }
 .banear .banera_content .ul_box2 {
   padding-top: 300px;
@@ -107,6 +124,24 @@ body {
 .banear .banera_content .ul_box2 li .none_pic img {
   width: 233px;
   height: 702px;
+}
+.banear .banera_content .ul_box2 li .li_tag {
+  position: absolute;
+  top: 70px;
+  left: 460px;
+  display: none;
+}
+.banear .banera_content .ul_box2 li .gif_box {
+  position: absolute;
+  bottom: 100px;
+  right: -125px;
+}
+.banear .banera_content .ul_box2 .xueren {
+  padding-left: 90px;
+  box-sizing: border-box;
+}
+.banear .banera_content .four {
+  position: relative;
 }
 .banear .banear_bottom {
   background-color: #770f0f;
@@ -181,4 +216,13 @@ body {
   width: 40px;
   height: 40px;
   background: url(../new_year_img/sprites_cbg_icon.png) no-repeat -549px -188px;
+}
+.four_yanhua {
+  position: absolute;
+  top: 4000px;
+  right: 40px;
+  width: 400px;
+}
+.four_yanhua img {
+  width: 100%;
 }
